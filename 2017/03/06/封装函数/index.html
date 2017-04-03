@@ -1,0 +1,783 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="堆栈,队列," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/uploads/me_favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="近期看的数据结构貌似呼还是挺有用的然而还是会忘记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="封装函数">
+<meta property="og:url" content="http://yoursite.com/2017/03/06/封装函数/index.html">
+<meta property="og:site_name" content="UNDERCOVERj">
+<meta property="og:description" content="近期看的数据结构貌似呼还是挺有用的然而还是会忘记">
+<meta property="og:updated_time" content="2017-04-03T09:50:44.734Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="封装函数">
+<meta name="twitter:description" content="近期看的数据结构貌似呼还是挺有用的然而还是会忘记">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/03/06/封装函数/"/>
+
+
+
+
+
+  <title> 封装函数 | UNDERCOVERj </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?b1f70da7e6973920903a3f9f808d3264";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">UNDERCOVERj</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">时间丢下我轰轰烈烈向前跑</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-music">
+          <a href="/music" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            音乐
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-vita">
+          <a href="/uploads/web前端_乐俊杰_重邮_18908355407.pdf" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            简历
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/06/封装函数/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="乐冠希">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/me.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="UNDERCOVERj">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                封装函数
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-06T17:35:12+08:00">
+                2017-03-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/03/06/封装函数/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/03/06/封装函数/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>近期看的数据结构<br>貌似呼还是挺有用的<br>然而还是会忘记<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div></pre></td><td class="code"><pre><div class="line">//栈</div><div class="line">function Stack() &#123;</div><div class="line">	var items = [];</div><div class="line">	this.push = function (element) &#123;</div><div class="line">		items.push(element);</div><div class="line">	&#125;;//推栈</div><div class="line">	this.pop = function () &#123;</div><div class="line">		return items.pop();</div><div class="line">	&#125;;//弹栈</div><div class="line">	this.peek = function () &#123;</div><div class="line">		return items[items.length - 1];</div><div class="line">	&#125;;//栈顶元素</div><div class="line">	this.isEmpty = function () &#123;</div><div class="line">		return items.length === 0;</div><div class="line">	&#125;;//栈是否为空</div><div class="line">	this.size = function () &#123;</div><div class="line">		return items.length;</div><div class="line">	&#125;;//栈大小</div><div class="line">	this.clear = function () &#123;</div><div class="line">		items = [];</div><div class="line">	&#125;;//清空栈</div><div class="line">	this.print = function () &#123;</div><div class="line">		console.log(items.toString());</div><div class="line">	&#125;;//打印栈</div><div class="line">&#125;</div><div class="line"></div><div class="line">//队列</div><div class="line">function Queue() &#123;</div><div class="line">	var items = [];</div><div class="line">	this.enqueue = function (element) &#123;</div><div class="line">		items.push(element);</div><div class="line">	&#125;//入队</div><div class="line">	this.dequeue = function () &#123;</div><div class="line">		return items.shift();</div><div class="line">	&#125;//出队</div><div class="line">	this.front = function () &#123;</div><div class="line">		return items[0];</div><div class="line">	&#125;//队首元素</div><div class="line">	this.isEmpty = function () &#123;</div><div class="line">		return items.length === 0;</div><div class="line">	&#125;//队列是否为空</div><div class="line">	this.clear = function () &#123;</div><div class="line">		items = [];</div><div class="line">	&#125;//清空队列</div><div class="line">	this.size = function () &#123;</div><div class="line">		return items.length;</div><div class="line">	&#125;//队列大小</div><div class="line">	this.print = function () &#123;</div><div class="line">		console.log(items.toString());</div><div class="line">	&#125;//打印队列</div><div class="line">&#125;</div><div class="line">//圣杯继承</div><div class="line">var inherit = (function ()&#123;</div><div class="line">    var F = function () &#123;&#125;;    </div><div class="line">    return function (Child, Parent) &#123;</div><div class="line">        F.prototype = Parent.prototype;</div><div class="line">        Child.prototype = new F();</div><div class="line">        Child.prototype.constructor = Child;</div><div class="line">        Child.prototype.uber = Parent.prototype;</div><div class="line">    &#125;</div><div class="line">&#125;)();</div><div class="line">//深层拷贝对象（不考虑函数）</div><div class="line">function deepClone(original, target) &#123;</div><div class="line">	var target = target || &#123;&#125;,</div><div class="line">		toStr = Object.prototype.toString,</div><div class="line">		arrStr = &apos;[object Array]&apos;;</div><div class="line">	for(var prop in original)&#123;</div><div class="line">		if(original.hasOwnProperty(prop))&#123;</div><div class="line">			if(typeof original[prop] === &apos;object&apos;)&#123;</div><div class="line">				target[prop] = (toStr.call(original[prop]) === arrStr) ? [] : &#123;&#125;;</div><div class="line">				deepClone(original[prop], target[prop]);</div><div class="line">			&#125;else&#123;</div><div class="line">				target[prop] = original[prop];</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">	return target;</div><div class="line">&#125;</div><div class="line">//数组去重</div><div class="line">Array.prototype.unique = function() &#123;</div><div class="line">	var obj = &#123;&#125;,</div><div class="line">		arr = [],</div><div class="line">		len = this.length;</div><div class="line">	for(var i = 0; i &lt; len; i++)&#123;</div><div class="line">		if(!obj[this[i]])&#123;</div><div class="line">			obj[this[i]] = true;</div><div class="line">			arr.push(this[i]);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	return arr;</div><div class="line">&#125;</div><div class="line">//类属性</div><div class="line">function classOf(o)&#123;</div><div class="line">	if(o === null)  return &quot;Null&quot;;</div><div class="line">	if(o === undefined)  return &quot;Undefined&quot;;</div><div class="line">	return Object.prototype.toString.call(o).slice(8,-1);</div><div class="line">&#125;</div><div class="line">//父节点的第几个元素节点</div><div class="line">Element.prototype.eleIndex = function()&#123;</div><div class="line">	var index = 0,</div><div class="line">		node = this;</div><div class="line">	while(node = node.previousSibling)&#123;</div><div class="line">		if(node.nodeType == 1)&#123;</div><div class="line">			index++;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	return index;</div><div class="line">&#125;</div><div class="line">//第n层祖先元素</div><div class="line">Element.prototype.nthParentEle = function(n) &#123;</div><div class="line">	var node = this,</div><div class="line">		n = n || 0;</div><div class="line">	while(node &amp;&amp; n--) &#123;</div><div class="line">		node = node.parentElement;</div><div class="line">	&#125;</div><div class="line">	return node;</div><div class="line">&#125;</div><div class="line">//第n个兄弟节点</div><div class="line">Element.prototype.nthSiblingEle = function(n)&#123;</div><div class="line">	var node = this;</div><div class="line">	while(node &amp;&amp; n) &#123;</div><div class="line">		if(n &gt; 0)&#123;</div><div class="line">			if(node.nextElementSibling)&#123;</div><div class="line">				node = node.nextElementSibling;</div><div class="line">			&#125;else&#123;</div><div class="line">				for(node = node.nextSibling; node &amp;&amp; node.nodeType !== 1; node = node.nextSibling);</div><div class="line">			&#125;</div><div class="line">			n--;</div><div class="line">		&#125;else&#123;</div><div class="line">			if(node.previousElementSibling)&#123;</div><div class="line">				node = node.previousElementSibling;</div><div class="line">			&#125;else&#123;</div><div class="line">				for(node = node.previousSibling; node &amp;&amp; node.nodeType !== 1; node = node.previousSibling);</div><div class="line">			&#125;</div><div class="line">			n++;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	return node;</div><div class="line">&#125;</div><div class="line">//在某元素后插入元素</div><div class="line">Element.prototype.insertAfter = function (targetNode, afterNode)&#123;</div><div class="line">	var siblingNode = afterNode.nextElementSibling;</div><div class="line">	if(siblingNode) &#123;</div><div class="line">		this.insertBefore(targetNode,siblingNode);</div><div class="line">	&#125; else &#123;</div><div class="line">		this.appendChild(targetNode);</div><div class="line">	&#125;</div><div class="line">	return targetNode;</div><div class="line">&#125;</div><div class="line">//销毁元素节点自身</div><div class="line">Element.prototype.remove = function ()&#123;</div><div class="line">	this.parentElement.removeChild(this);</div><div class="line">&#125;</div><div class="line">//目标节点内部的节点顺序逆序</div><div class="line">Element.prototype.revChild = function ()&#123;</div><div class="line">	var child = this.children,</div><div class="line">		len = child.length;</div><div class="line">	for (var i = len - 2; i &gt;= 0; i--)&#123;</div><div class="line">		this.appendChild(child[i]);</div><div class="line">	&#125;</div><div class="line">	return this;</div><div class="line">&#125;</div><div class="line">//查看滚动轮滚动距离</div><div class="line">function getScrollOffset()&#123;</div><div class="line">	if(window.pageXOffset)&#123;</div><div class="line">		return &#123;</div><div class="line">			x: window.pageXOffset,</div><div class="line">			y: window.pageYOffset</div><div class="line">		&#125;</div><div class="line">	&#125;else&#123;</div><div class="line">		return &#123;</div><div class="line">			x: document.body.scrollLeft + document.documentElement.scrollLeft,</div><div class="line">			y: document.body.scrollTop + document.documentElement.scrollTop</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">//查看浏览器视口尺寸</div><div class="line">function getViewportOffset()&#123;</div><div class="line">	if(window.innerWidth)&#123;</div><div class="line">		return &#123;</div><div class="line">			w: window.innerWidth,</div><div class="line">			h: window.innerHeight</div><div class="line">		&#125;</div><div class="line">	&#125;else if(document.compatMode === &quot;CSS1Compat&quot;)&#123;</div><div class="line">		return&#123;</div><div class="line">			w: document.documentElement.clientWidth,</div><div class="line">			h: document.documentElement.clientHeight</div><div class="line">		&#125;</div><div class="line">	&#125;else&#123;</div><div class="line">		return&#123;</div><div class="line">			w: document.body.clientWidth,</div><div class="line">			h: document.body.clientHeight</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">//求元素相对于文档的坐标</div><div class="line">Element.prototype.getCoord = function ()&#123;</div><div class="line">	var coordX = 0,</div><div class="line">		coordY = 0,</div><div class="line">		docEle = this;</div><div class="line">	while(docEle)&#123;</div><div class="line">		coordX += docEle.offsetLeft;</div><div class="line">		coordY += docEle.offsetTop;</div><div class="line">		docEle = docEle.offsetParent;</div><div class="line">	&#125;</div><div class="line">	return &#123;</div><div class="line">		x: coordX,</div><div class="line">		y: coordY</div><div class="line">	&#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//获取相对文档的距离</div><div class="line">var X= this.getBoundingClientRect().left+document.documentElement.scrollLeft;</div><div class="line">	var Y =this.getBoundingClientRect().top+document.documentElement.scrollTop;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div></pre></td><td class="code"><pre><div class="line">//获取样式</div><div class="line">function getStyle(ele, style)&#123;</div><div class="line">	if(window.getComputedStyle)&#123;</div><div class="line">		return window.getComputedStyle(ele,null)[style];</div><div class="line">	&#125;else&#123;</div><div class="line">		return ele.currentStyle[style];</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">//添加事件</div><div class="line">function addEvent(elem, type, handler)&#123;</div><div class="line">	if(elem.addEventListener)&#123;</div><div class="line">		elem.addEventListener(type, handler, false);</div><div class="line">	&#125;else if(elem.attachEvent)&#123;</div><div class="line">		elem[&apos;temp&apos; + type + handler] = handler;</div><div class="line">		elem[&apos;temp&apos; + type] = function()&#123;</div><div class="line">			elem[&apos;temp&apos; + type + handler].call(elem);</div><div class="line">		&#125;		</div><div class="line">		elem.attachEvent(&apos;on&apos; + type, elem[&apos;temp&apos; + type]);</div><div class="line">	&#125;else&#123;</div><div class="line">		elem[&apos;on&apos; + type] = handler;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">//解除事件</div><div class="line">function removeEvent(elem, type, handler)&#123;</div><div class="line">	if(elem.removeEventListener)&#123;</div><div class="line">		elem.removeEventListener(type, handler, false);</div><div class="line">	&#125;else if(elem.detachEvent)&#123;</div><div class="line">		elem.detachEvent(&apos;on&apos; + type, elem[&apos;temp&apos; + type]);</div><div class="line">	&#125;else&#123;</div><div class="line">		elem[&apos;on&apos; + type] = null;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">//取消冒泡</div><div class="line">function stopBubble(event)&#123;</div><div class="line">	if(event.stopPropagation)&#123;</div><div class="line">		event.stopPropagation();</div><div class="line">	&#125;else&#123;</div><div class="line">		event.cancelBubble = true;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">//阻止默认事件</div><div class="line">function cancelHandler(event)&#123;</div><div class="line">	if(event.preventDefault)&#123;</div><div class="line">		event.preventDefault();</div><div class="line">	&#125;else&#123;</div><div class="line">		event.returnValue = false;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">//拖拽元素</div><div class="line">function drag(elem)&#123;</div><div class="line">    var disX;</div><div class="line">    var disY;</div><div class="line">    addEvent(elem,&quot;mousedown&quot;,function(e)&#123;</div><div class="line">        var event = e || window.event;</div><div class="line">        disX = event.clientX - parseInt(getStyle(this,&quot;left&quot;));</div><div class="line">        disY = event.clientY - parseInt(getStyle(this,&quot;top&quot;));</div><div class="line">        addEvent(document,&quot;mousemove&quot;,mouseMove);</div><div class="line">        addEvent(document,&quot;mouseup&quot;,mouseUp);</div><div class="line">    &#125;);</div><div class="line">    function mouseMove(e)&#123;</div><div class="line">        var event = e || window.event;</div><div class="line">        elem.style.left = event.pageX - disX + &apos;px&apos;;</div><div class="line">        elem.style.top = event.pageY - disY + &apos;px&apos;;</div><div class="line">    &#125;</div><div class="line">    function mouseUp()&#123;</div><div class="line">        removeEvent(document,&quot;mousemove&quot;,mouseMove);</div><div class="line">        removeEvent(document,&quot;mouseup&quot;,mouseUp);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">//多物体多值链式运动框架</div><div class="line">function startMove(elem, json, func)&#123;</div><div class="line">	clearInterval(elem.timer);</div><div class="line">	var iSpeed;</div><div class="line">	var iCur;</div><div class="line">	var bStop;</div><div class="line">	elem.timer = setInterval(function()&#123;</div><div class="line">		bStop = true;</div><div class="line">		for(var attr in json)&#123;</div><div class="line">			iCur = attr === &apos;opacity&apos; ? parseFloat(getStyle(elem,attr)) * 100 : parseInt(getStyle(elem,attr));</div><div class="line">			iSpeed = attr === &apos;opacity&apos; ? (parseFloat(json[attr])* 100 - iCur) / 7 : (parseInt(json[attr]) - iCur) / 7;</div><div class="line">			iSpeed = iSpeed &gt; 0 ? Math.ceil(iSpeed) : Math.floor(iSpeed);</div><div class="line">			elem.style[attr] = attr === &quot;opacity&quot; ? (iCur + iSpeed) / 100 : iCur + iSpeed + &apos;px&apos;;</div><div class="line">			if(iCur !== (attr === &apos;opacity&apos; ? parseFloat(json[attr]) * 100 : parseInt(json[attr])))&#123;</div><div class="line">				bStop = false;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		if(bStop)&#123;	</div><div class="line">			clearInterval(elem.timer);	</div><div class="line">			if(func)&#123;</div><div class="line">				func();</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;,30);</div><div class="line">&#125;</div><div class="line">//按需异步加载script</div><div class="line">function scriptLoaded(url, callback)&#123;</div><div class="line">	var script = document.createElement(&apos;script&apos;);</div><div class="line">	script.type = &quot;text/javascript&quot;;</div><div class="line">	if(script.readyState)&#123;</div><div class="line">		script.onreadystatechange = function()&#123;</div><div class="line">			if(script.readyState == &quot;complete&quot; || script.readyState == &quot;loaded&quot;)&#123;</div><div class="line">				callback();</div><div class="line">				script.onreadystatechange = null;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;else&#123;</div><div class="line">		script.onload = function()&#123;</div><div class="line">			script.onload  = null;</div><div class="line">			callback();</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	script.src = url;</div><div class="line">	document.head.appendChild(script);</div><div class="line">&#125;</div><div class="line">//兼容getElementByClassName</div><div class="line">Document.prototype.getByClassName = function(target) &#123;</div><div class="line">    var allEle = document.getElementsByTagName(&apos;*&apos;),</div><div class="line">        len = allEle.length,</div><div class="line">        arr = [],</div><div class="line">        classArr = [],</div><div class="line">        classArrLen;</div><div class="line">    for(var i = 0; i &lt; len; i++) &#123;</div><div class="line">        classArr = allEle[i].className.myTrim().splice(&apos; &apos;);</div><div class="line">        classArrLen = classArr.length;</div><div class="line">        for(var j = 0; j &lt; classArrLen; j++)&#123;</div><div class="line">            if(classArr[j] === target)&#123;</div><div class="line">                arr.push(allEle[i]);</div><div class="line">                break;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return arr;</div><div class="line">&#125;</div><div class="line">//兼容trim</div><div class="line">String.prototype.myTrim = function() &#123;</div><div class="line">    var reg = /^\s*|\s*$/;</div><div class="line">    return this.replace(reg,&apos;&apos;);</div><div class="line">&#125;</div><div class="line">String.prototype.trim=function()&#123;</div><div class="line">    return this.replace(/(^\s*)|(\s*$)/g, &quot;&quot;);</div><div class="line">&#125;</div><div class="line">String.prototype.ltrim=function()&#123;</div><div class="line">    return this.replace(/(^\s*)/g,&quot;&quot;);</div><div class="line">&#125;</div><div class="line">String.prototype.rtrim=function()&#123;</div><div class="line">    return this.replace(/(\s*$)/g,&quot;&quot;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">//共享onload事件</div><div class="line">function addLoadEvent(func)&#123;</div><div class="line">	var oldLoad=window.onload</div><div class="line">	if(typeof window.onload!=&apos;function&apos;)&#123;</div><div class="line">		window.onload=func</div><div class="line">	&#125;else&#123;</div><div class="line">		window.onload=function()&#123;</div><div class="line">			oldLoad()</div><div class="line">			func()</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/堆栈/" rel="tag"># 堆栈</a>
+          
+            <a href="/tags/队列/" rel="tag"># 队列</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/06/某公司面试/" rel="next" title="某公司面试">
+                <i class="fa fa-chevron-left"></i> 某公司面试
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/03/06/数组操作/" rel="prev" title="数组操作">
+                数组操作 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/me.jpg"
+               alt="乐冠希" />
+          <p class="site-author-name" itemprop="name">乐冠希</p>
+           
+              <p class="site-description motion-element" itemprop="description">时间丢下我轰轰烈烈向前跑</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/UNDERCOVERj" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/p/1005052371190212/home" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="/uploads/web前端_乐俊杰_重邮_18908355407.pdf" target="_blank" title="简历">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  简历
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">乐冠希</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://https-undercoverj-github-io.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2017/03/06/封装函数/';
+          this.page.identifier = '2017/03/06/封装函数/';
+          this.page.title = '封装函数';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://https-undercoverj-github-io.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
