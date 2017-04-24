@@ -89,16 +89,19 @@
 
 
 
-<meta name="description" content="创建第一个应用123456789var http = require(&amp;apos;http&amp;apos;)http.createServer(function(req,res) &amp;#123;	//发送http头部	//状态码200	//内容类型：text/plain	res.writeHead(200,&amp;#123;&amp;apos;Content-Type&amp;apos;:&amp;apos;text/plain&amp;a">
+<meta name="description" content="创建第一个应用原文1
+123456789var http = require(&amp;apos;http&amp;apos;)http.createServer(function(req,res) &amp;#123;	//发送http头部	//状态码200	//内容类型：text/plain	res.writeHead(200,&amp;#123;&amp;apos;Content-Type&amp;apos;:&amp;apos;text/pla">
 <meta property="og:type" content="article">
 <meta property="og:title" content="node.js之学习">
 <meta property="og:url" content="https://undercoverj.github.io/2017/04/21/node-js之学习/index.html">
 <meta property="og:site_name" content="UNDERCOVERj">
-<meta property="og:description" content="创建第一个应用123456789var http = require(&amp;apos;http&amp;apos;)http.createServer(function(req,res) &amp;#123;	//发送http头部	//状态码200	//内容类型：text/plain	res.writeHead(200,&amp;#123;&amp;apos;Content-Type&amp;apos;:&amp;apos;text/plain&amp;a">
-<meta property="og:updated_time" content="2017-04-24T12:16:21.992Z">
+<meta property="og:description" content="创建第一个应用原文1
+123456789var http = require(&amp;apos;http&amp;apos;)http.createServer(function(req,res) &amp;#123;	//发送http头部	//状态码200	//内容类型：text/plain	res.writeHead(200,&amp;#123;&amp;apos;Content-Type&amp;apos;:&amp;apos;text/pla">
+<meta property="og:updated_time" content="2017-04-24T13:02:09.626Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="node.js之学习">
-<meta name="twitter:description" content="创建第一个应用123456789var http = require(&amp;apos;http&amp;apos;)http.createServer(function(req,res) &amp;#123;	//发送http头部	//状态码200	//内容类型：text/plain	res.writeHead(200,&amp;#123;&amp;apos;Content-Type&amp;apos;:&amp;apos;text/plain&amp;a">
+<meta name="twitter:description" content="创建第一个应用原文1
+123456789var http = require(&amp;apos;http&amp;apos;)http.createServer(function(req,res) &amp;#123;	//发送http头部	//状态码200	//内容类型：text/plain	res.writeHead(200,&amp;#123;&amp;apos;Content-Type&amp;apos;:&amp;apos;text/pla">
 
 
 
@@ -434,7 +437,8 @@
       
 
       
-        <h2 id="创建第一个应用"><a href="#创建第一个应用" class="headerlink" title="创建第一个应用"></a>创建第一个应用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var http = require(&apos;http&apos;)</div><div class="line">http.createServer(function(req,res) &#123;</div><div class="line">	//发送http头部</div><div class="line">	//状态码200</div><div class="line">	//内容类型：text/plain</div><div class="line">	res.writeHead(200,&#123;&apos;Content-Type&apos;:&apos;text/plain&apos;&#125;);</div><div class="line">	//发送响应信息</div><div class="line">	res.end(&apos;hello world&apos;)</div><div class="line">&#125;).listen(8080)</div></pre></td></tr></table></figure>
+        <h2 id="创建第一个应用"><a href="#创建第一个应用" class="headerlink" title="创建第一个应用"></a>创建第一个应用</h2><p><a href="http://blog.jobbole.com/30592/" target="_blank" rel="external">原文1</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var http = require(&apos;http&apos;)</div><div class="line">http.createServer(function(req,res) &#123;</div><div class="line">	//发送http头部</div><div class="line">	//状态码200</div><div class="line">	//内容类型：text/plain</div><div class="line">	res.writeHead(200,&#123;&apos;Content-Type&apos;:&apos;text/plain&apos;&#125;);</div><div class="line">	//发送响应信息</div><div class="line">	res.end(&apos;hello world&apos;)</div><div class="line">&#125;).listen(8080)</div></pre></td></tr></table></figure>
 <ul>
 <li>第一行请求（require）Node.js 自带的 http 模块，并且把它赋值给 http 变量。</li>
 <li>接下来我们调用 http 模块提供的函数： createServer 。这个函数会返回 一个对象，这个对象有一个叫做 listen 的方法，这个方法有一个数值参数， 指定这个 HTTP 服务器监听的端口号。<h2 id="repl-交互式解释器"><a href="#repl-交互式解释器" class="headerlink" title="repl(交互式解释器)"></a>repl(交互式解释器)</h2>ctrl + c - 退出当前终端。<br>ctrl + c 按下两次 - 退出 Node REPL。<br>ctrl + d - 退出 Node REPL.<br>向上/向下 键 - 查看输入的历史命令<br>tab 键 - 列出当前命令<br>.help - 列出使用命令<br>.break - 退出多行表达式<br>.clear - 退出多行表达式<br>.save filename - 保存当前的 Node REPL 会话到指定文件<br>.load filename - 载入当前 Node REPL 会话的文件内容。</li>
