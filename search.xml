@@ -45,6 +45,13 @@
 
     
     <entry>
+      <title><![CDATA[闭包应用场景]]></title>
+      <url>%2F2017%2F04%2F09%2F%E9%97%AD%E5%8C%85%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%2F</url>
+      <content type="text"><![CDATA[闭包是指有权访问另一个函数作用域的变量的函数 setTimeout setTimeout(func,time)这里的func不能带参数,解决这个问题需要用闭包 1234567function func(param) &#123; return function() &#123; alert(param); &#125;&#125;var f = func(1)setTimeout(f, 1000); 代替全局变量 123456789101112131415//闭包，test2是局部变量，这是闭包的目的//我们经常在小范围使用全局变量，这个时候就可以使用闭包来代替。(function()&#123;var test2=222;function outer()&#123; alert(test2);&#125;function test()&#123; alert(&quot;测试闭包：&quot;+test2);&#125;outer(); //222test(); //测试闭包：222&#125;)(); alert(test2); //未定义，这里就访问不到test2 为节点循环绑定click事件，在事件函数中使用当次循环的值或节点，而不是最后一次循环的值或节点 创建特权方法用于访问控制]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[内存泄漏]]></title>
       <url>%2F2017%2F04%2F09%2F%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F%2F</url>
       <content type="text"><![CDATA[setTimeout 的第一个参数使用字符串而非函数的话，会引发内存泄漏。 闭包 123456789101112131415function assignHandler()&#123; var element = document.getElementById(&quot;someElement&quot;); element.onclick = function()&#123; alert(element.id); &#125;;&#125;应改为function assignHandler()&#123; var element = document.getElementById(&quot;someElement&quot;); var id = element.id; element.onclick = function()&#123; alert(id); &#125;; element = null;&#125; 控制台日志 循环（在两个对象彼此引用且彼此保留时，就会产生一个循环）]]></content>
