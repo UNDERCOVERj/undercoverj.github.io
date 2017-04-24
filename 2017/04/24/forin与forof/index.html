@@ -73,7 +73,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="循环," />
 
 
 
@@ -89,15 +89,22 @@
 
 
 
-<meta name="description" content="时间丢下我轰轰烈烈向前跑">
-<meta property="og:type" content="website">
-<meta property="og:title" content="UNDERCOVERj">
-<meta property="og:url" content="https://undercoverj.github.io/tags/数字类型/index.html">
+<meta name="description" content="for...of循环可以使用的范围包括数组、Set 和 Map 结构、某些类似数组的对象（比如arguments对象、DOM NodeList 对象）、后文的 Generator 对象，以及字符串。
+
+123456789const arr = [&amp;apos;red&amp;apos;, &amp;apos;green&amp;apos;, &amp;apos;blue&amp;apos;];for(let v of arr) &amp;#12">
+<meta property="og:type" content="article">
+<meta property="og:title" content="for-of和for-in">
+<meta property="og:url" content="https://undercoverj.github.io/2017/04/24/forin与forof/index.html">
 <meta property="og:site_name" content="UNDERCOVERj">
-<meta property="og:description" content="时间丢下我轰轰烈烈向前跑">
+<meta property="og:description" content="for...of循环可以使用的范围包括数组、Set 和 Map 结构、某些类似数组的对象（比如arguments对象、DOM NodeList 对象）、后文的 Generator 对象，以及字符串。
+
+123456789const arr = [&amp;apos;red&amp;apos;, &amp;apos;green&amp;apos;, &amp;apos;blue&amp;apos;];for(let v of arr) &amp;#12">
+<meta property="og:updated_time" content="2017-04-24T13:07:30.390Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="UNDERCOVERj">
-<meta name="twitter:description" content="时间丢下我轰轰烈烈向前跑">
+<meta name="twitter:title" content="for-of和for-in">
+<meta name="twitter:description" content="for...of循环可以使用的范围包括数组、Set 和 Map 结构、某些类似数组的对象（比如arguments对象、DOM NodeList 对象）、后文的 Generator 对象，以及字符串。
+
+123456789const arr = [&amp;apos;red&amp;apos;, &amp;apos;green&amp;apos;, &amp;apos;blue&amp;apos;];for(let v of arr) &amp;#12">
 
 
 
@@ -125,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="https://undercoverj.github.io/tags/数字类型/"/>
+  <link rel="canonical" href="https://undercoverj.github.io/2017/04/24/forin与forof/"/>
 
 
 
 
 
-  <title> 标签: 数字类型 | UNDERCOVERj </title>
+  <title> for-of和for-in | UNDERCOVERj </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -156,7 +163,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -304,46 +311,247 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        数字类型
-        <small>标签</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://undercoverj.github.io/2017/04/24/forin与forof/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="乐冠希">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/me.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="UNDERCOVERj">
+    </span>
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                for-of和for-in
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-24T20:40:35+08:00">
+                2017-04-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/es6/" itemprop="url" rel="index">
+                    <span itemprop="name">es6</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/04/24/forin与forof/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/04/24/forin与forof/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/04/24/forin与forof/" class="leancloud_visitors" data-flag-title="for-of和for-in">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+          
+        </div>
+
+        
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <ul>
+<li><code>for...of</code>循环可以使用的范围包括数组、Set 和 Map 结构、某些类似数组的对象（比如arguments对象、DOM NodeList 对象）、后文的 Generator 对象，以及字符串。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">const arr = [&apos;red&apos;, &apos;green&apos;, &apos;blue&apos;];</div><div class="line"></div><div class="line">for(let v of arr) &#123;</div><div class="line">  console.log(v); // red green blue</div><div class="line">&#125;</div><div class="line">for(let v in arr) &#123;</div><div class="line">  console.log(v); // 0 1 2</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>for…of循环调用遍历器接口，数组的遍历器接口只返回具有数字索引的属性。这一点跟for…in循环也不一样。</li>
+<li>并不是所有类似数组的对象都具有 Iterator 接口，一个简便的解决方法，就是使用Array.from方法将其转为数组</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">let arrayLike = &#123; length: 2, 0: &apos;a&apos;, 1: &apos;b&apos; &#125;;</div><div class="line"></div><div class="line">// 报错</div><div class="line">for (let x of arrayLike) &#123;</div><div class="line">  console.log(x);</div><div class="line">&#125;</div><div class="line"></div><div class="line">// 正确</div><div class="line">for (let x of Array.from(arrayLike)) &#123;</div><div class="line">  console.log(x);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>更多介绍<a href="http://www.infoq.com/cn/articles/es6-in-depth-iterators-and-the-for-of-loop" target="_blank" rel="external">戳这里</a></p>
 
-      <h1 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/2017/04/24/将字符串转换成数字/" itemprop="url">
-              
-                <span itemprop="name">将字符串转换成数字</span>
-              
-            </a>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/wechat.png" alt="乐冠希 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+    </div>
+  </div>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-24T20:19:44+08:00"
-              content="2017-04-24" >
-          04-24
-        </time>
-      </div>
 
-    </header>
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      乐冠希
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://undercoverj.github.io/2017/04/24/forin与forof/" title="for-of和for-in">https://undercoverj.github.io/2017/04/24/forin与forof/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/循环/" rel="tag"># 循环</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/24/js和css载入/" rel="next" title="js和css载入">
+                <i class="fa fa-chevron-left"></i> js和css载入
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/04/24/面试准备/" rel="prev" title="面试准备">
+                面试准备 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -351,6 +559,17 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -578,6 +797,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
@@ -595,6 +818,18 @@
       <script id="dsq-count-scr" src="https://https-undercoverj-github-io.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://undercoverj.github.io/2017/04/24/forin与forof/';
+          this.page.identifier = '2017/04/24/forin与forof/';
+          this.page.title = 'for-of和for-in';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://https-undercoverj-github-io.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   

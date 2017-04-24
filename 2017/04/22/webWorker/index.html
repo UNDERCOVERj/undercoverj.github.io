@@ -73,7 +73,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="日记," />
+  <meta name="keywords" content="h5," />
 
 
 
@@ -89,28 +89,25 @@
 
 
 
-<meta name="description" content="折腾hexo两天了，让我对那些牛逼的人又心生崇拜了然而还有些功能没加，又丑又慢，下面进入正题
-
-3月结束了，过得好累啊3月，但4月会更累。。。学校里的樱花都开了，浪多berber嬢嬢些都在照相。一同学都和女朋友跑武大去看樱花咯。而我们。。。前面那女生还是同学的朋友来坐一下。活得不累，活的gay啊！3月中旬投了一个成都的小公司，结果被面得我毫无自信了。然后就看面经，看计网，看数据结构，可是还是好差。">
+<meta name="description" content="Web Workers 是 HTML5 提供的一个javascript多线程解决方案，我们可以将一些大计算量的代码交由web Worker运行而不冻结用户界面。在浏览器后台运行JavaScript， 而不占用浏览器自身线程。Web Worker可以提高应用的总体性能，并且提升用户体验。学习自：
+原文1
+原文2
+12345678910111213141516171819202122232425262">
 <meta property="og:type" content="article">
-<meta property="og:title" content="想说">
-<meta property="og:url" content="https://undercoverj.github.io/2017/04/03/daily1/index.html">
+<meta property="og:title" content="webWorker">
+<meta property="og:url" content="https://undercoverj.github.io/2017/04/22/webWorker/index.html">
 <meta property="og:site_name" content="UNDERCOVERj">
-<meta property="og:description" content="折腾hexo两天了，让我对那些牛逼的人又心生崇拜了然而还有些功能没加，又丑又慢，下面进入正题
-
-3月结束了，过得好累啊3月，但4月会更累。。。学校里的樱花都开了，浪多berber嬢嬢些都在照相。一同学都和女朋友跑武大去看樱花咯。而我们。。。前面那女生还是同学的朋友来坐一下。活得不累，活的gay啊！3月中旬投了一个成都的小公司，结果被面得我毫无自信了。然后就看面经，看计网，看数据结构，可是还是好差。">
-<meta property="og:image" content="https://undercoverj.github.io/daily1/1.jpg">
-<meta property="og:image" content="https://undercoverj.github.io/daily1/3.jpg">
-<meta property="og:image" content="https://undercoverj.github.io/daily1/2.jpg">
-<meta property="og:image" content="https://undercoverj.github.io/daily1/4.png">
-<meta property="og:image" content="https://undercoverj.github.io/daily1/5.png">
-<meta property="og:updated_time" content="2017-04-04T03:37:40.349Z">
+<meta property="og:description" content="Web Workers 是 HTML5 提供的一个javascript多线程解决方案，我们可以将一些大计算量的代码交由web Worker运行而不冻结用户界面。在浏览器后台运行JavaScript， 而不占用浏览器自身线程。Web Worker可以提高应用的总体性能，并且提升用户体验。学习自：
+原文1
+原文2
+12345678910111213141516171819202122232425262">
+<meta property="og:updated_time" content="2017-04-24T13:07:12.334Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="想说">
-<meta name="twitter:description" content="折腾hexo两天了，让我对那些牛逼的人又心生崇拜了然而还有些功能没加，又丑又慢，下面进入正题
-
-3月结束了，过得好累啊3月，但4月会更累。。。学校里的樱花都开了，浪多berber嬢嬢些都在照相。一同学都和女朋友跑武大去看樱花咯。而我们。。。前面那女生还是同学的朋友来坐一下。活得不累，活的gay啊！3月中旬投了一个成都的小公司，结果被面得我毫无自信了。然后就看面经，看计网，看数据结构，可是还是好差。">
-<meta name="twitter:image" content="https://undercoverj.github.io/daily1/1.jpg">
+<meta name="twitter:title" content="webWorker">
+<meta name="twitter:description" content="Web Workers 是 HTML5 提供的一个javascript多线程解决方案，我们可以将一些大计算量的代码交由web Worker运行而不冻结用户界面。在浏览器后台运行JavaScript， 而不占用浏览器自身线程。Web Worker可以提高应用的总体性能，并且提升用户体验。学习自：
+原文1
+原文2
+12345678910111213141516171819202122232425262">
 
 
 
@@ -138,13 +135,13 @@
 
 
 
-  <link rel="canonical" href="https://undercoverj.github.io/2017/04/03/daily1/"/>
+  <link rel="canonical" href="https://undercoverj.github.io/2017/04/22/webWorker/"/>
 
 
 
 
 
-  <title> 想说 | UNDERCOVERj </title>
+  <title> webWorker | UNDERCOVERj </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -327,7 +324,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://undercoverj.github.io/2017/04/03/daily1/">
+    <link itemprop="mainEntityOfPage" href="https://undercoverj.github.io/2017/04/22/webWorker/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="乐冠希">
@@ -348,7 +345,7 @@
             
             
               
-                想说
+                webWorker
               
             
           </h1>
@@ -363,8 +360,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-03T23:45:07+08:00">
-                2017-04-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-22T20:13:17+08:00">
+                2017-04-22
               </time>
             
 
@@ -386,8 +383,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/life/" itemprop="url" rel="index">
-                    <span itemprop="name">life</span>
+                  <a href="/categories/html-css/" itemprop="url" rel="index">
+                    <span itemprop="name">html&css</span>
                   </a>
                 </span>
 
@@ -404,9 +401,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/04/03/daily1/#comments" itemprop="discussionUrl">
+                <a href="/2017/04/22/webWorker/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/04/03/daily1/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2017/04/22/webWorker/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -414,7 +411,7 @@
 
           
           
-             <span id="/2017/04/03/daily1/" class="leancloud_visitors" data-flag-title="想说">
+             <span id="/2017/04/22/webWorker/" class="leancloud_visitors" data-flag-title="webWorker">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -446,17 +443,37 @@
       
 
       
-        <p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=114369&auto=1&height=66"></iframe><br>折腾hexo两天了，让我对那些牛逼的人又心生崇拜了<br>然而还有些功能没加，又丑又慢，下面进入正题</p>
-<hr>
-<p>3月结束了，过得好累啊3月，但4月会更累。。。<br>学校里的樱花都开了，浪多berber嬢嬢些都在照相。<br><img src="/daily1/1.jpg" alt="图片描述"><br>一同学都和女朋友跑武大去看樱花咯。而我们。。。<br><img src="/daily1/3.jpg" alt="图片"><br>前面那女生还是同学的朋友来坐一下。活得不累，活的gay啊！<br>3月中旬投了一个成都的小公司，结果被面得我毫无自信了。然后就看面经，看计网，看数据结构，可是还是好差。。。<br>网申了几家公司，但笔试好坑好坑，估计一家都不得给面试。（怀疑人生中）</p>
-<hr>
-<p>但我觉得现在得生活好充实，忙碌吧但又自由，最主要是有几个志同道合的同学，生活还是比高三那会舒服。不知不觉还是快要高考了，又想到那个不知天高地厚的自己，觉得最差也要考个川大，结果啪啪啪打脸了吧<br>但现在觉得还是不咋个。<br>当初也不造咋选了计算机，可能觉得高大上吧。结果进学校就被c语言弄的怀疑人生。感觉什么都不懂<br>更懵逼的是当时一个班学长说来辅导我们高数啊什么的，他说我们有问题就去二教五楼找他，他随时在那儿。<br>当时我就觉得，握草，这学长这么牛批，换我怎么也做不到，都不打游戏吗，结果我现在就是他那样了?我就是因为刚开始太闲了，要不就是睡觉，最后无奈玩上了游戏，一玩就不得了了，沉浸于自我无法自拔，比照镜子还有成就感。但我觉得那会游戏维持了我跟高中兄弟的联系，大学同学也赞同我说法。现在不玩了，兄弟就都在心中了，因为大家都开始忙了，等回家了再一醉方休。讲真好久没有跟熟识的人聊天了。不知道他们过得咋样呢。不过我晓得他们背单词牛批的很，100多天的打卡。我这学期刚开始也在打，结果最多一周。和寝室考研的兄弟伙些一样，他们也只坚持了1周的早起。</p>
-<hr>
-<p>有点困咯，晕乎乎<br><img src="/daily1/2.jpg" alt="图片描述"><br>你以为要结束了，no<br><strong> 今天是我爸的生日 </strong></p>
-<p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=110330&auto=0&height=66"></iframe><br>不对是昨天，3号<br>生日快乐啊爸爸，好久没陪爸爸过生日了。惭愧至极。我也不造为什么我本来能说个不停的人，在家人面前就始终说不出来，从小到大都这样，是不是要看哈心里医生啊。好久没有和爸爸合照了，突然好想家人啊。这学期过了我要常回家了，感觉家乡的人都觉得我消失了一样。每次三姑六婆都在说自己孩子怎么的时候，我想爸妈一定会有失落吧，“俊杰总不喜欢和我们分享自己的事”。但是我也不是不喜欢，怎么说呢，从小到大都是这样，已经习惯了，难过的事不会告诉他们，高兴的事也偶尔告诉他们。我真的，不管今后再外面闯的什么个层次，我心里永远都觉得自己是失败的。我做的不好，我也不知道怎么做好。<br>照片是08年的时候吧好像，我妈弄在微信里发给我的，那时候笑的好灿烂，但这分钟我哭了。。<br><img src="/daily1/4.png" alt="图片描述"><br><img src="/daily1/5.png" alt="图片描述"></p>
-<h2 id="我爱你们"><a href="#我爱你们" class="headerlink" title="我爱你们"></a>我爱你们</h2><h2 id="愿望"><a href="#愿望" class="headerlink" title="愿望"></a>愿望</h2><ul>
-<li>家人平安健康</li>
+        <p>Web Workers 是 HTML5 提供的一个javascript多线程解决方案，我们可以将一些大计算量的代码交由web Worker运行而不冻结用户界面。在浏览器后台运行JavaScript， 而不占用浏览器自身线程。Web Worker可以提高应用的总体性能，并且提升用户体验。<br>学习自：</p>
+<p><a href="http://blog.jobbole.com/30592/" target="_blank" rel="external">原文1</a></p>
+<p><a href="http://blog.csdn.net/dojotoolkit/article/details/25030289" target="_blank" rel="external">原文2</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">//test.html</div><div class="line">&lt;!DOCTYPE HTML&gt;</div><div class="line">&lt;html&gt;</div><div class="line">	&lt;head&gt;</div><div class="line">		&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;/&gt;</div><div class="line"></div><div class="line">	&lt;/head&gt;</div><div class="line">	&lt;body&gt;</div><div class="line">		&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">			//WEB页主线程</div><div class="line">			var worker =new Worker(&quot;worker.js&quot;); //创建一个Worker对象并向它传递将在新线程中执行的脚本的URL</div><div class="line">			worker.postMessage(&quot;hello world&quot;);     //向worker发送数据</div><div class="line">			worker.onmessage =function(evt)&#123;     //接收worker传过来的数据函数</div><div class="line">			console.log(evt.data);              //输出worker发送来的数据</div><div class="line">			&#125;</div><div class="line">		&lt;/script&gt;</div><div class="line">	&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div><div class="line"></div><div class="line">//worker.js</div><div class="line">onmessage =function (evt)&#123;</div><div class="line">  var d = evt.data;//通过evt.data获得发送来的数据</div><div class="line">  console.log(evt)</div><div class="line">  postMessage( d );//将获取到的数据发送会主线程</div><div class="line">&#125;</div><div class="line">//在chrome中不可以运行</div></pre></td></tr></table></figure>
+<p>如果不用web worker：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">document.querySelector(&apos;div&apos;).onclick = function() &#123; </div><div class="line">    console.log(&apos;hello world&apos;); </div><div class="line">  &#125;; </div><div class="line"> </div><div class="line">function fibonacci(n) &#123; </div><div class="line">  return n &lt; 2 ? n : arguments.callee(n - 1) + arguments.callee(n - 2); </div><div class="line">&#125; </div><div class="line"> </div><div class="line"> console.log(fibonacci(36)); </div><div class="line">//只有在等计算完成后才打印hello world</div></pre></td></tr></table></figure>
+<p>关于web worker的七件事</p>
+<h2 id="Web-Worker-可以让你在后台运行Javascript"><a href="#Web-Worker-可以让你在后台运行Javascript" class="headerlink" title="Web Worker 可以让你在后台运行Javascript"></a>Web Worker 可以让你在后台运行Javascript</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;!DOCTYPE HTML&gt;</div><div class="line">&lt;html&gt;</div><div class="line">	&lt;head&gt;</div><div class="line">		&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;/&gt;</div><div class="line">		&lt;title&gt;web worker fibonacci&lt;/title&gt;</div><div class="line"></div><div class="line">	&lt;/head&gt;</div><div class="line">	&lt;body&gt;</div><div class="line">		&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">			onload =function()&#123;</div><div class="line">			  var worker =new Worker(&apos;fibonacci.js&apos;);  </div><div class="line">			  worker.addEventListener(&apos;message&apos;, function(event) &#123;</div><div class="line">			    var timer2 = (new Date()).valueOf();</div><div class="line">			       console.log( &apos;结果：&apos;+event.data, &apos;时间:&apos;+ timer2, &apos;用时：&apos;+ ( timer2  - timer ) );</div><div class="line">			  &#125;, false);</div><div class="line">			  var timer = (new Date()).valueOf();</div><div class="line">			  console.log(&apos;开始计算：40&apos;,&apos;时间:&apos;+ timer );</div><div class="line">			  setTimeout(function()&#123;</div><div class="line">			      console.log(&apos;定时器函数在计算数列时执行了&apos;, &apos;时间:&apos;+ (new Date()).valueOf() );</div><div class="line">			  &#125;,1000);</div><div class="line">			  worker.postMessage(40);</div><div class="line">			  console.log(&apos;我在计算数列的时候执行了&apos;, &apos;时间:&apos;+ (new Date()).valueOf() );</div><div class="line">			&#125;  </div><div class="line">		&lt;/script&gt;</div><div class="line">	&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div><div class="line"></div><div class="line">//fibonacci.js</div><div class="line">var fibonacci =function(n) &#123;</div><div class="line">    return n &lt;2? n : arguments.callee(n -1) + arguments.callee(n -2);</div><div class="line">&#125;;</div><div class="line">onmessage =function(event) &#123;</div><div class="line">    var n = parseInt(event.data, 10);</div><div class="line">    postMessage(fibonacci(n));</div><div class="line">&#125;;</div><div class="line">//控制台:</div><div class="line">开始计算：40 时间:1492829709415</div><div class="line">我在计算数列的时候执行了 时间:1492829709419  </div><div class="line">定时器函数在计算数列时执行了 时间:1492829710419  </div><div class="line">结果：102334155 时间:1492829780583 用时：71168</div></pre></td></tr></table></figure>
+<p><strong>限制：</strong></p>
+<ul>
+<li>Web Worker无法访问DOM节点；</li>
+<li>Web Worker无法访问全局变量或是全局函数；</li>
+<li>Web Worker无法调用alert()或者confirm之类的函数；</li>
+<li>Web Worker无法访问window、document之类的浏览器全局变量；</li>
 </ul>
+<p>不过Web Worker中的Javascript依然可以使用setTimeout(),setInterval()之类的函数，也可以使用XMLHttpRequest对象来做Ajax通信。</p>
+<h2 id="两种web-worker"><a href="#两种web-worker" class="headerlink" title="两种web worker"></a>两种web worker</h2><ol>
+<li>专用线程dedicated web worker<br>只能被创建它的页面访问， 随当前页面的关闭而结束</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">//time.js</div><div class="line">addEventListener(&apos;message&apos;,function(evt) &#123;</div><div class="line">	setTimeout(function()&#123;</div><div class="line">		console.log(&apos;finish&apos;)</div><div class="line">		postMessage(200)</div><div class="line">	&#125;,evt.data)</div><div class="line">&#125;)</div><div class="line">//time.html</div><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=&quot;en&quot;&gt;</div><div class="line">    &lt;head&gt;</div><div class="line">        &lt;meta charset=&quot;utf-8&quot;&gt;</div><div class="line">    &lt;/head&gt;</div><div class="line">    &lt;body&gt;</div><div class="line">    &lt;button&gt;click me&lt;/button&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">    	var el = document.querySelector(&apos;button&apos;);</div><div class="line">    	el.addEventListener(&apos;click&apos;,function() &#123;</div><div class="line">    		var worker = new Worker(&apos;time.js&apos;);</div><div class="line">    		worker.addEventListener(&apos;message&apos;,function(evt) &#123;</div><div class="line">    			console.log(&apos;success&apos;)</div><div class="line">    		&#125;,false)</div><div class="line">    		setTimeout(function()&#123;</div><div class="line">    			console.log(&apos;in&apos;)</div><div class="line">    		&#125;,1000)</div><div class="line">    		worker.postMessage(5000)</div><div class="line">    		console.log(&apos;begin&apos;)</div><div class="line">    	&#125;,false)</div><div class="line">    &lt;/script&gt;</div><div class="line">    &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div><div class="line">//控制台</div><div class="line">begin </div><div class="line">in  </div><div class="line">finish  </div><div class="line">success</div></pre></td></tr></table></figure>
+<ol>
+<li>共享线程shared web worker<br>为多个页面服务。在这种情况下，我们会创建一个共享线程的Shared web worker，它可以被与之相关联的多个页面访问，只有当所有关联的的页面都关闭的时候，该Shared web worker才会结束。</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">// shared_worker.js</div><div class="line">function factorial(num)&#123;</div><div class="line">    var i = 1,</div><div class="line">        result = 1;</div><div class="line">    for (; i &lt;= num; i ++)&#123;</div><div class="line">        result *= i;</div><div class="line">    &#125;</div><div class="line">    return result;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var count  = 0;</div><div class="line"></div><div class="line">self.addEventListener(&apos;connect&apos;, function(event)&#123;</div><div class="line">    var port = event.ports[0]</div><div class="line">    port.onmessage = function(event)&#123;</div><div class="line">        var number = 0;</div><div class="line">        count += 1;</div><div class="line">        if (event.data)&#123;</div><div class="line">           number = parseInt(event.data, 10) || 0;</div><div class="line">           if (number &gt; 0)&#123;</div><div class="line">               number = factorial(number);</div><div class="line">           &#125;</div><div class="line">        &#125;</div><div class="line">        port.postMessage(&quot;count &quot; + count + &quot;: &quot; + number);</div><div class="line">    &#125;;</div><div class="line">    port.start();</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">    &lt;title&gt;using web worker&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">        function showMsg(msg)&#123;</div><div class="line">            var p = document.createElement(&apos;p&apos;);</div><div class="line">            p.innerHTML = msg;</div><div class="line">            document.body.appendChild(p);</div><div class="line">        &#125;</div><div class="line">        var worker = new SharedWorker(&apos;../js/shared_worker.js&apos;);</div><div class="line">        worker.port.postMessage(&apos;60&apos;);</div><div class="line">        worker.port.onmessage = function(event)&#123;</div><div class="line">            showMsg(event.data);</div><div class="line">        &#125;;</div><div class="line">        worker.port.onerror = function(event)&#123;</div><div class="line">            showMsg(event.message);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        var worker1 = new SharedWorker(&apos;../js/shared_worker.js&apos;);</div><div class="line">        worker1.port.postMessage(&apos;10&apos;);</div><div class="line">        worker1.port.onmessage = function(event)&#123;</div><div class="line">            showMsg(&quot;worker1: &quot; + event.data); </div><div class="line">        &#125;;</div><div class="line">        worker1.port.onerror = function(event)&#123;</div><div class="line">            showMsg(&quot;worker1 &quot; + event.message); </div><div class="line">        &#125;</div><div class="line">        worker1.onerror = function(event)&#123;</div><div class="line">            showMsg(&quot;worker1 &quot; + event.message); </div><div class="line">        &#125;</div><div class="line">        showMsg(&quot;shared worker start.&quot;);</div><div class="line">    &lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<h2 id="Web-Worker使用XMLHttpRequest与服务端通信"><a href="#Web-Worker使用XMLHttpRequest与服务端通信" class="headerlink" title="Web Worker使用XMLHttpRequest与服务端通信"></a>Web Worker使用XMLHttpRequest与服务端通信</h2><h2 id="通过Error事件捕捉错误信息"><a href="#通过Error事件捕捉错误信息" class="headerlink" title="通过Error事件捕捉错误信息"></a>通过Error事件捕捉错误信息</h2><h2 id="通过terminate-方法终止Web-Worker"><a href="#通过terminate-方法终止Web-Worker" class="headerlink" title="通过terminate()方法终止Web Worker"></a>通过terminate()方法终止Web Worker</h2><h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><ol>
+<li>可以加载一个JS进行大量的复杂计算而不挂起主进程，并通过postMessage，onmessage进行通信</li>
+<li>可以使用 setTimeout(), clearTimeout(), setInterval(), and clearInterval()</li>
+<li>可以使用XMLHttpRequest来发送请求</li>
+<li>可以访问navigator的部分属性</li>
+</ol>
 
       
     </div>
@@ -501,7 +518,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://undercoverj.github.io/2017/04/03/daily1/" title="想说">https://undercoverj.github.io/2017/04/03/daily1/</a>
+      <a href="https://undercoverj.github.io/2017/04/22/webWorker/" title="webWorker">https://undercoverj.github.io/2017/04/22/webWorker/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -517,7 +534,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/日记/" rel="tag"># 日记</a>
+            <a href="/tags/h5/" rel="tag"># h5</a>
           
         </div>
       
@@ -530,8 +547,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/07/居中/" rel="next" title="居中">
-                <i class="fa fa-chevron-left"></i> 居中
+              <a href="/2017/04/21/node-js之学习/" rel="next" title="node.js之学习">
+                <i class="fa fa-chevron-left"></i> node.js之学习
               </a>
             
           </div>
@@ -540,8 +557,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/04/框架对比/" rel="prev" title="框架对比">
-                框架对比 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/04/24/将字符串转换成数字/" rel="prev" title="将字符串转换成数字">
+                将字符串转换成数字 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -707,7 +724,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#我爱你们"><span class="nav-number">1.</span> <span class="nav-text">我爱你们</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#愿望"><span class="nav-number">2.</span> <span class="nav-text">愿望</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Web-Worker-可以让你在后台运行Javascript"><span class="nav-number">1.</span> <span class="nav-text">Web Worker 可以让你在后台运行Javascript</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#两种web-worker"><span class="nav-number">2.</span> <span class="nav-text">两种web worker</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Web-Worker使用XMLHttpRequest与服务端通信"><span class="nav-number">3.</span> <span class="nav-text">Web Worker使用XMLHttpRequest与服务端通信</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过Error事件捕捉错误信息"><span class="nav-number">4.</span> <span class="nav-text">通过Error事件捕捉错误信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过terminate-方法终止Web-Worker"><span class="nav-number">5.</span> <span class="nav-text">通过terminate()方法终止Web Worker</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#优点"><span class="nav-number">6.</span> <span class="nav-text">优点</span></a></li></ol></div>
             
 
           </div>
@@ -853,9 +870,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://undercoverj.github.io/2017/04/03/daily1/';
-          this.page.identifier = '2017/04/03/daily1/';
-          this.page.title = '想说';
+          this.page.url = 'https://undercoverj.github.io/2017/04/22/webWorker/';
+          this.page.identifier = '2017/04/22/webWorker/';
+          this.page.title = 'webWorker';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://https-undercoverj-github-io.disqus.com/embed.js';
